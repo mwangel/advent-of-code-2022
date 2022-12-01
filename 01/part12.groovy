@@ -5,7 +5,7 @@ def load = 0
 
 data.each { s ->
   if( !s ) {
-    elfLoads << cv
+    elfLoads << load
     load = 0
   }
   else {
@@ -13,7 +13,7 @@ data.each { s ->
   }
 }
 
-println( "part 1: ${elfWeights.max()}" )
+println( "part 1: ${elfLoads.max()}" )
 
 f = elfLoads.sort().reverse()
 println( "part 2: ${f[0] + f[1] + f[2]}" )
